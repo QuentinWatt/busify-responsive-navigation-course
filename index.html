@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Responsive Navigation Tutorial by Quentin Watt </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css"/>
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    
+    <header class="main-header">
+      <div class="header-bar container">
+        <div class="menu-left">
+          <a href="index.html">
+            <img src="./images/busify-icon-2.png" height="40" />
+          </a>
+
+          <nav id="main-nav" class="main-nav sm-hidden">
+            <ul class="main-nav-menu">
+              <li>
+                <a href="#" class="menu-link">
+                  Home
+                </a>
+              </li>
+              
+              <li>
+                <a href="#" class="menu-link">
+                  Schedule
+                </a>
+
+                <img 
+                  src="./images/menu-dropdown.svg" 
+                  width="12"
+                  class="child-menu-indicator"
+                />
+                
+                <ul class="child-menu">
+                  <li>
+                    <a href="#cape-town" class="menu-link">
+                      Cape Town
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#foreshore" class="menu-link">
+                      Foreshore
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#woodstock" class="menu-link">
+                      Woodstock
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#gardens" class="menu-link">
+                      Gardens
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#sea-point" class="menu-link">
+                      Sea Point
+                    </a>
+                  </li>
+                </ul>
+              </li>
+  
+              <li>
+                <a href="#" class="menu-link">
+                  Bookings
+                </a>
+                
+                <img 
+                  src="./images/menu-dropdown.svg" 
+                  width="12"
+                  class="child-menu-indicator"
+                />
+
+                <ul class="child-menu">
+                  <li>
+                    <a href="#previous-bookings" class="menu-link">
+                      Previous bookings
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#previous-bookings" class="menu-link">
+                      Upcoming bookings
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#previous-bookings" class="menu-link">
+                      Billing history
+                    </a>
+                  </li>
+                </ul>
+              </li>
+  
+              <li>
+                <a href="#" class="menu-link">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+  
+        <div class="menu-right">
+          <div id="menu-opener" class="menu-switcher" onclick="openMenu()">
+            <img src="./images/burger-menu.svg" height="24" />
+          </div>
+  
+          <div id="menu-closer" class="menu-switcher hidden" onclick="closeMenu()">
+            <img src="./images/close-icon.svg" height="24" />
+          </div>
+  
+          <div class="login-links sm-hidden">
+            <a href="#sign-up" class="btn btn-white">Sign up</a>
+            <a href="#login" class="btn btn-white">Login</a>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <nav id="mobile-nav" class="mobile-nav lg-hidden">
+      
+      <div class="mobile-login-links">
+        <a href="#sign-up" class="btn">Sign up</a>
+        <a href="#login" class="btn">Login</a>
+      </div>
+
+      <ul class="mobile-nav-menu">
+        <li>
+          <a href="#" class="menu-link">
+            Home
+          </a>
+        </li>
+        
+        <li>
+          <a href="#" class="menu-link">
+            Schedule
+          </a>
+          <ul class="child-menu">
+            <li>
+              <a href="#cape-town" class="menu-link">
+                Cape Town
+              </a>
+            </li>
+            <li>
+              <a href="#foreshore" class="menu-link">
+                Foreshore
+              </a>
+            </li>
+            <li>
+              <a href="#woodstock" class="menu-link">
+                Woodstock
+              </a>
+            </li>
+            <li>
+              <a href="#gardens" class="menu-link">
+                Gardens
+              </a>
+            </li>
+            <li>
+              <a href="#sea-point" class="menu-link">
+                Sea Point
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" class="menu-link">
+            Bookings
+          </a>
+          <ul class="child-menu">
+            <li>
+              <a href="#previous-bookings" class="menu-link">
+                Previous bookings
+              </a>
+            </li>
+            <li>
+              <a href="#previous-bookings" class="menu-link">
+                Upcoming bookings
+              </a>
+            </li>
+            <li>
+              <a href="#previous-bookings" class="menu-link">
+                Billing history
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" class="menu-link">
+            Contact
+          </a>
+        </li>
+      </ul>
+      
+      <div class="find-a-bus">
+        <a href="#find-a-bus" class="btn">Find a bus</a>
+      </div>
+
+    </nav>
+
+    <div id="content">
+      <!-- All content to go here -->
+
+      <main class="main-content container">
+        <div class="content-wrapper">
+          <h1> Find public transport in your area </h1>
+          
+          <img src="./images/bus-mountains.jpg" style="margin-top:1em;"/>
+
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem id perferendis, aliquam sunt velit voluptatem aliquid vero est maiores. Voluptatem magnam nihil error magni unde deleniti minus quisquam ullam explicabo!
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem id perferendis, aliquam sunt velit voluptatem aliquid vero est maiores. Voluptatem magnam nihil error magni unde deleniti minus quisquam ullam explicabo!
+          </p>
+        </div>
+      </main>
+
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,270 @@
+/* CSS resets */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/** Colors **/
+:root{
+  --white: #fff;
+  --offwhite: #f5f5f5;
+  --blue-200: #003875;
+  --blue-500: #01172F;
+  --green-500: #00635D;
+  --green-700: #004a45;
+  --grey-500: #eeeeee;
+  --grey-600: #aaaaaa;
+}
+
+/* Defaults */
+p{
+  margin: 1em 0;
+}
+
+img{
+  max-width: 100%;
+}
+
+html{
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  background-color: var(--grey-500);
+  position: relative;
+  padding-top: 4em;
+}
+
+/* utility */
+.btn {
+  background-color: var(--green-500);
+  color: var(--white);
+  border-radius: 4px;
+  padding: 0.8em 1em;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn:hover{
+  background-color: var(--green-700);
+}
+
+.btn-white{
+  background-color: var(--white);
+  color: var(--green-700);
+}
+
+.btn-white:hover{
+  background-color: var(--offwhite);
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+.hidden{
+  display: none;
+}
+
+@media screen and (max-width:768px){
+  .sm-hidden{
+    display:none;
+  }
+}
+
+@media screen and (min-width:769px){
+  .lg-hidden{
+    display:none;
+  }
+}
+
+/* Header */
+.main-header{
+  display: flex;
+  border-bottom: 1px solid var(--grey-600);
+  height: 4em;
+  background-color: var(--green-500);
+}
+
+.main-header .menu-left{
+  display: flex;
+  align-items: center;
+}
+
+.main-header .login-links .btn{
+  width: 6em;
+}
+
+.main-header .container{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Mobile Navigation */
+.mobile-nav-menu{
+  list-style: none;
+}
+
+.main-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
+}
+
+.mobile-nav{
+  visibility: hidden;
+  position: absolute;
+  z-index: 90;
+  top: 0;
+  top: 0;
+  background-color: var(--blue-500);
+  width: 100vw;
+  transition: all 400ms ease;
+  height: 0;
+  overflow: auto;
+}
+
+.mobile-nav.active{
+  visibility: visible;
+  height: calc(100vh - 4em);
+  transform: translateY(4em);
+}
+
+.menu-link{
+  text-decoration: none;
+  display:block;
+  color: var(--white);
+}
+
+.mobile-nav .menu-link{
+  padding: 1em;
+}
+
+.mobile-nav > ul > li{
+  border-bottom: 1px solid var(--blue-200);
+}
+
+.mobile-nav .child-menu{
+  margin-left: 1em;
+}
+
+.mobile-nav .child-menu .menu-link{
+  padding: 1em;
+}
+
+.menu-link:hover{
+  cursor: pointer;
+}
+
+.mobile-login-links{
+  display: flex;
+  padding: 1em 0;
+  border-bottom: 1px solid var(--blue-200);
+}
+
+.mobile-login-links .btn{
+  width: 100%;
+  margin: 1em;
+}
+
+.mobile-nav .find-a-bus{
+  padding: 1em;
+  display: flex;
+}
+
+.mobile-nav .find-a-bus .btn{
+  width: 100%;
+}
+
+.child-menu{
+  list-style: none;
+}
+
+/* Desktop Navigation */
+.main-nav-menu{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  height: 4em;
+}
+
+.main-nav-menu > li{
+  display: flex;
+  align-items: center;
+  height: 4em;
+  padding: 0 1em;
+  position: relative;
+}
+
+.main-nav-menu .child-menu{
+  list-style: none;
+  visibility: hidden;
+  margin-top: 4em;
+  transform: translateY(-1em);
+  opacity: 0;
+  transition: all 400ms ease;
+}
+
+.main-nav-menu > li:hover > .child-menu{
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0em);
+}
+
+.main-nav-menu > li:hover{
+  background-color: var(--green-700);
+}
+
+.main-nav-menu > li > .child-menu{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--green-500);
+  border: 1px solid var(--green-700);
+  border-radius: 4px;
+  box-shadow: 0 5px 10px black;
+}
+
+.main-nav-menu > li > .child-menu li{
+  width: 10em;
+  padding: 1em;
+  border-bottom: 1px solid var(--green-700);
+}
+
+.main-nav-menu > li > .child-menu li:hover{
+  background-color: var(--green-700);
+}
+
+.child-menu-indicator{
+  margin-left: 5px;
+  transition: all 200ms ease;
+}
+
+.main-nav-menu > li:hover .child-menu-indicator{
+  transform: rotate(180deg);
+}
+
+@media screen and (min-width:769px){
+  .menu-switcher{
+    display: none;
+  }  
+}
+
+/* Page content */
+.content-wrapper{
+  background-color: var(--white);
+  border: 1px solid var(--grey-600);
+  border-radius: 4px;
+  padding: 1em;
+  margin-top: 1em;
+}
